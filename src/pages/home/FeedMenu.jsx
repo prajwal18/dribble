@@ -4,7 +4,6 @@ import {
   Button,
   MenuList,
   MenuItem,
-  Text,
 } from "@chakra-ui/react";
 import { feedMenuData } from "./data";
 
@@ -26,9 +25,13 @@ const FeedMenu = () => {
 
       <MenuList>
         {feedMenuData.map((data) => (
-          <MenuItem key={data.id} color={data.id == 7 ? "red.600" : "gray.500"} gap={2}>
-            {data.logo()}
-            <Text>{data.title}</Text>
+          <MenuItem
+            key={data.id}
+            icon={data.logo()}
+            color={data.id === 7 ? "red.600" : "gray.500"}
+            gap={2}
+          >
+            {data.title}
           </MenuItem>
         ))}
       </MenuList>
