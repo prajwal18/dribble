@@ -1,9 +1,7 @@
-import Layout from "./components/layout/Layout";
-import MainContainer from "./components/layout/main-container/MainContainer";
-import Sidebar from "./components/layout/sidebar/Sidebar";
+import Router from "./router/Router";
 
 function App() {
-  return <Layout></Layout>;
+  return <Router />;
 }
 
 export default App;

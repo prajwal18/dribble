@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Stack } from "@chakra-ui/react";
+import Navbar from "./Navbar";
 
 const Container = styled(Stack)({
   marginLeft: "400px",
@@ -8,12 +9,11 @@ const Container = styled(Stack)({
   minHeight: "100vh",
 });
 
-const NavBar = styled(Stack)({
-  justifyContent: 'space-between',
-});
-
-const MainContainer = () => {
-  return <Container p={4}></Container>;
+const MainContainer = ({children}) => {
+  return <Container p={6} spacing={4}>
+    <Navbar/>
+    {children}
+  </Container>;
 };
 
 export default MainContainer;
