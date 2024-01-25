@@ -9,11 +9,13 @@ const Container = styled(Stack)({
   minHeight: "100vh",
 });
 
-const MainContainer = ({children}) => {
-  return <Container p={6} spacing={4}>
-    <Navbar/>
-    {children}
-  </Container>;
+const MainContainer = ({ children }) => {
+  return (
+    <Container p={6} spacing={4}>
+      <Navbar />
+      {children}
+    </Container>
+  );
 };
 
 export default MainContainer;

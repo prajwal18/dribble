@@ -1,6 +1,12 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, background } from "@chakra-ui/react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+
+import styled from "@emotion/styled";
+
+const NavLink = styled(Text)((prop) => ({
+  background: prop.active? 'gray.200': 'white'
+}))
 
 const SidebarListItem = ({ name, icon, to }) => {
   const navigate = useNavigate();
