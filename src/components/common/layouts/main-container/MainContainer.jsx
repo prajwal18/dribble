@@ -12,7 +12,6 @@ const Container = styled(Stack)({
 const MainContainer = ({ children }) => {
   return (
     <Container p={6} spacing={4}>
-      <Navbar />
       {children}
     </Container>
   );

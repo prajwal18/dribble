@@ -1,11 +1,11 @@
 import React from "react";
 import { Box, Button, Center, Stack, Text } from "@chakra-ui/react";
-import Lottie from "lottie-react";
 import { useNavigate } from "react-router-dom";
-
-// lottie file
-import lottie_file from "../../assets/lottie/404_lottie.json";
-// lottie file
+import Lottie from "lottie-react";
+// Icon
+import EastTwoToneIcon from "@mui/icons-material/EastTwoTone";
+// Icon
+import lottie_file from "../../../assets/lottie/404_lottie.json";
 
 const PageNotFound = () => {
   const navigate = useNavigate();
@@ -26,8 +26,14 @@ const PageNotFound = () => {
           removed.
         </Text>
         <Box paddingTop={5}>
-          <Button colorScheme="blue" variant="link" onClick={handleClick}>
-            Go Back {"->"}
+          <Button
+            display={"flex"}
+            gap={2}
+            colorScheme="blue"
+            variant="link"
+            onClick={handleClick}
+          >
+            <Text>Go Back</Text> <EastTwoToneIcon />
           </Button>
         </Box>
       </Stack>

@@ -12,11 +12,11 @@ const NavbarContainer = styled(Flex)({
   alignItems: "center",
 });
 
-const Navbar = () => {
+const Navbar = ({ title, }) => {
   return (
     <NavbarContainer>
       <Text fontSize="3xl" fontWeight="700">
-        Business
+        {title}
       </Text>
       <Flex gap={4} align="center">
         <Flex
